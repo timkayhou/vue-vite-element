@@ -22,5 +22,13 @@
     "*ignore",
     "*rc.json",
   ],
-  "cSpell.words": []
+  "cSpell.words": [
+    "Avenir",
+    "brotli",
+    "esnext",
+    "singlefile",
+    "unplugin",
+    "vite",
+    "vitejs"
+  ]
 }

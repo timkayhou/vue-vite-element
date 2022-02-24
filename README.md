@@ -1,6 +1,6 @@
-# [vue3](https://vuejs.org/guide/introduction.html)-[vite](https://vitejs.dev/guide/)-[element+](https://element-plus.org/en-US/)
+# [vue3](https://vuejs.org/guide/introduction.html)-[vite](https://vitejs.dev/guide/)-[element+](https://element-plus.org/en-US/)-[antdv](https://www.antdv.com/)
 
-Vue3 + Vite2 + Element plus.
+Vue3 + Vite2 + Element plus + Ant design vue.
 
 ## Build development environment
 
@@ -156,7 +156,7 @@ export default defineConfig({
 })
 ```
 
-#### Compile without adding hash code suffix to resource files
+#### [Compile without adding hash code suffix to resource files]
 
 ```TypeScript
 // vite.config.ts

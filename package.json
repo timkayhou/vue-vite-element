@@ -12,12 +12,12 @@
     "vue": "^3.2.31"
   },
   "devDependencies": {
-    "@types/node": "*",
+    "@types/node": "17.0.21",
     "@vitejs/plugin-vue": "^2.2.2",
     "@vue/compiler-sfc": "^3.2.31",
     "sass": "^1.49.8",
     "typescript": "^4.5.5",
-    "unplugin-vue-components": "^0.17.20",
+    "unplugin-vue-components": "^0.17.21",
     "vite": "^2.8.4",
     "vue-tsc": "^0.31.4"
   }

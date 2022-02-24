@@ -1,6 +1,6 @@
-# [vue3](https://vuejs.org/guide/introduction.html)-[vite](https://vitejs.dev/guide/)-[element+](https://element-plus.org/en-US/)-[antdv](https://www.antdv.com/)
+# [vue3](https://vuejs.org/guide/introduction.html)-[vite](https://vitejs.dev/guide/)-[elementplus](https://element-plus.org/en-US/)-[antdv](https://www.antdv.com/)-[sass](https://sass-lang.com/)-[less](https://lesscss.org/)
 
-Vue3 + Vite2 + Element plus + Ant design vue.
+Vue3 + Vite2 + Element plus + Ant design vue + Sass + Less.
 
 ## Build development environment
 

@@ -61,16 +61,54 @@ git clone https://github.com/element-plus/element-plus-vite-starter.git
 npm install --global yarn
 ```
 
-### [Scaffolding Vite project](https://vitejs.dev/guide/#scaffolding-your-first-vite-project)
-
-```PowerShell
-# PowerShell
-yarn create @vitejs/app <project-name> --template vue-ts
-```
-
 ### Install [extensions for Visual Studio Code](https://marketplace.visualstudio.com/vscode)
 
 Install [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar), [[Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)], [[git-commit-plugin](https://marketplace.visualstudio.com/items?itemName=redjue.git-commit-plugin)]
+
+### Install Ant Design Vue
+
+```PowerShell
+# PowerShell
+yarn add ant-design-vue
+```
+
+```TypeScript
+// vite.config.ts
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
+
+export default defineConfig({
+  plugins: [
+    vue(),
+    Components({
+      resolvers: [
+        AntDesignVueResolver(),
+        ElementPlusResolver({
+          importStyle: 'sass',
+        }),
+      ],
+      dts: path.resolve(pathSrc, 'components.d.ts'),
+    }),
+  ],
+})
+```
+
+### 🛈[Chunks are larger than 500 KiB]
+
+> (!) Some chunks are larger than 500 KiB after minification. Consider:
+> Using dynamic import() to code-split the application
+> Use build.rollupOptions.output.manualChunks to improve chunking: <https://rollupjs.org/guide/en/#outputmanualchunks>
+> Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+```TypeScript
+// vite.config.ts
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
+
+export default defineConfig({
+  build: {
+    chunkSizeWarningLimit: 1000,
+  },
+})
+```
 
 ### Install packages
 

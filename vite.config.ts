@@ -3,6 +3,7 @@ import path from 'path'
 import { AntDesignVueResolver, ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
+import { viteSingleFile } from 'vite-plugin-singlefile'
 
 const pathSrc = path.resolve(__dirname, 'src')
 
@@ -14,7 +15,18 @@ export default defineConfig({
     },
   },
   build: {
+    target: "esnext",
+    outDir: 'dist',
+    assetsInlineLimit: 1000,
     chunkSizeWarningLimit: 1000,
+    cssCodeSplit: false,
+    brotliSize: false,
+    rollupOptions: {
+      inlineDynamicImports: true,
+      output: {
+        manualChunks: () => "everything.js",
+      },
+    },
   },
   css: {
     preprocessorOptions: {
@@ -25,6 +37,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
+    viteSingleFile(),
     Components({
       resolvers: [
         AntDesignVueResolver(),

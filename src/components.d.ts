@@ -4,6 +4,10 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AButton: typeof import('ant-design-vue/es')['Button']
+    ADatePicker: typeof import('ant-design-vue/es')['DatePicker']
+    AInput: typeof import('ant-design-vue/es')['Input']
+    ATag: typeof import('ant-design-vue/es')['Tag']
     BaseHeader: typeof import('./components/layouts/BaseHeader.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElDatePicker: typeof import('element-plus/es')['ElDatePicker']

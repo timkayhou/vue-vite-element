@@ -1,6 +1,6 @@
 <template>
   <el-menu class="el-menu-demo" mode="horizontal">
-    <el-menu-item index="1">Element Plus</el-menu-item>
+    <el-menu-item index="1">Vue</el-menu-item>
     <el-sub-menu index="2">
       <template #title>Workspace</template>
       <el-menu-item index="2-1">item one</el-menu-item>

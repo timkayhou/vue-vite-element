@@ -1,9 +1,8 @@
-import path from 'path'
-import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-
+import path from 'path'
+import { AntDesignVueResolver, ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import { defineConfig } from 'vite'
 
 const pathSrc = path.resolve(__dirname, 'src')
 
@@ -25,6 +24,7 @@ export default defineConfig({
     vue(),
     Components({
       resolvers: [
+        AntDesignVueResolver(),
         ElementPlusResolver({
           importStyle: 'sass',
         }),

@@ -1,12 +1,15 @@
 <template>
   <BaseHeader />
-  <img alt="Vue logo" class="element-plus-logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Element Plus + Vite" />
+  <img alt="Vue logo" style="height: 100px" class="logo" src="./assets/vue.svg" />
+  <img alt="Vite logo" style="height: 100px" class="logo" src="./assets/vite.svg" />
+  <img alt="Element logo" style="height: 100px" class="logo" src="./assets/element-plus.svg" />
+  <img alt="Ant logo" style="height: 100px" class="logo" src="./assets/ant-design-vue.svg" />
+  <HelloWorld msg="Hello Vue + Vite + Element Plus + Ant Design Vue" />
 </template>
 
 <script setup lang="ts">
-import BaseHeader from "./components/layouts/BaseHeader.vue";
 import HelloWorld from "./components/HelloWorld.vue";
+import BaseHeader from "./components/layouts/BaseHeader.vue";
 </script>
 
 <style>
@@ -17,7 +20,7 @@ import HelloWorld from "./components/HelloWorld.vue";
   text-align: center;
   color: #2c3e50;
 }
-.element-plus-logo {
-  width: 50%;
+.logo {
+  width: 5%;
 }
 </style>

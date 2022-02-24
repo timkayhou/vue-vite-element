@@ -13,6 +13,9 @@ export default defineConfig({
       '~/': `${pathSrc}/`,
     },
   },
+  build: {
+    chunkSizeWarningLimit: 1000,
+  },
   css: {
     preprocessorOptions: {
       scss: {

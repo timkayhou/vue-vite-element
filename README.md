@@ -307,21 +307,18 @@ yarn add --dev stylelint stylelint-prettier stylelint-config-prettier stylelint-
 
 ```yaml
 # .stylelint.yml
-env:
-  browser: true
-  es2021: true
-  vue/setup-compiler-macros: true
 extends:
-  - eslint:recommended
-  - plugin:vue/vue3-essential
-  - plugin:@typescript-eslint/recommended
-  - prettier
-parserOptions:
-  ecmaVersion: latest
-  parser: '@typescript-eslint/parser'
-  sourceType: module
+  - stylelint-config-standard-scss
+  - stylelint-config-prettier-scss
+  - stylelint-config-rational-order
+  - stylelint-config-html/html
+  - stylelint-config-html/xml
+  - stylelint-config-html/svelte
+  - stylelint-config-html/php
+  - stylelint-config-recommended-vue
+  - stylelint-prettier/recommended
 plugins:
-  - vue
-  - '@typescript-eslint'
-rules: { prettier/prettier: error }
+  - stylelint-prettier
+rules:
+  prettier/prettier: true
 ```

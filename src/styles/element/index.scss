@@ -1,4 +1,4 @@
-$--colors: (
+$global-colors: (
   'primary': (
     'base': green
   ),
@@ -22,9 +22,10 @@ $--colors: (
 // You should use them in scss, because we calculate it by sass.
 // comment next lines to use default color
 @forward 'element-plus/theme-chalk/src/common/var.scss' with (
-  // do not use same name, it will override.
-  $colors: $--colors,
-  $button-padding-horizontal: ('default': 50px)
+  $colors: $global-colors,
+  $button-padding-horizontal: (
+    'default': 50px
+  )
 );
 
 // if you want to import all

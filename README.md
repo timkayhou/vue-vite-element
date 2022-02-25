@@ -126,7 +126,7 @@ yarn run build
 
 #### [Vue [SFC](https://vuejs.org/guide/scaling-up/sfc.html)]
 
-> [Vue Single-File Components](https://www.npmjs.com/package/vite-plugin-singlefile) (aka *.vue files, abbreviated as SFC) is a special file format that allows us to encapsulate the template, logic, and styling of a Vue component in a single file.
+> [Vue Single-File Components](https://www.npmjs.com/package/vite-plugin-singlefile) (aka \*.vue files, abbreviated as SFC) is a special file format that allows us to encapsulate the template, logic, and styling of a Vue component in a single file.
 
 ```PowerShell
 # PowerShell
@@ -224,26 +224,68 @@ yarn add --dev eslint
 eslint --init
 ```
 
->√ How would you like to use ESLint? · problems
+> √ How would you like to use ESLint? · problems
 >
->? What type of modules does your project use? ...
+> ? What type of modules does your project use? ...
 >
->√ JavaScript modules (import/export)
+> √ JavaScript modules (import/export)
 >
 > CommonJS (require/exports)
 >
->√ What type of modules does your project use? · esm
+> √ What type of modules does your project use? · esm
 >
->√ Which framework does your project use? · vue
+> √ Which framework does your project use? · vue
 >
->√ Does your project use TypeScript? · No / Yes
+> √ Does your project use TypeScript? · No / Yes
 >
->√ Where does your code run? · browser
+> √ Where does your code run? · browser
 >
->√ What format do you want your config file to be in? · YAML
+> √ What format do you want your config file to be in? · YAML
 >
->The config that you've selected requires the following dependencies:
+> The config that you've selected requires the following dependencies:
 >
->eslint-plugin-vue@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/>parser@latest
+> eslint-plugin-vue@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/>parser@latest
 >
->√ Would you like to install them now with npm? · No / Yes
+> √ Would you like to install them now with npm? · No / Yes
+
+### ESLint extends: Vue2 → Vue3
+
+```yaml
+# .eslintrc.yml
+env:
+  browser: true
+  es2021: true
+  vue/setup-compiler-macros: true
+extends:
+  - eslint:recommended
+  - plugin:vue/vue3-essential
+```
+
+### Install Prettier
+
+```yaml
+# .eslintrc.yml
+extends:
+  - eslint:recommended
+  - plugin:vue/vue3-essential
+  - plugin:@typescript-eslint/recommended
+  - prettier
+rules: { prettier/prettier: error }
+```
+
+### Install EditorConfig
+
+```config
+# .editorconfig
+# http://editorconfig.org
+
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+```

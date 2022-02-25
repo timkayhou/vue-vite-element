@@ -30,6 +30,7 @@
     "prettierrc",
     "singlefile",
     "stylelint",
+    "stylelintrc",
     "tidelift",
     "unplugin",
     "vite",

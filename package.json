@@ -1,14 +1,15 @@
 {
   "name": "element-plus-vite-starter",
-  "private": true,
   "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview",
+    "dev": "vite",
     "eslint": "eslint --cache --cache-location \"node_modules\\.cache\\.eslintcache\" --max-warnings 0 \"{src,mock}/**/*.{vue,ts,tsx,js,jsx}\" --fix",
     "prettier": "npx prettier --write .",
-    "stylelint": "stylelint '**/*.{scss,sass,less,css,html,vue,xml,svelte,php,twig,jade,js,ts,tsx,json,md,yml,yaml,ini,toml,hbs,ejs,pug,jinja,j2,j3}' --syntax scss --fix"
+    "preview": "vite preview",
+    "sort-json": "npx sort-package-json \"*.json\" \"*(?!node_modules)/*.json\"",
+    "stylelint": "npx stylelint '**/*.{scss,sass,less,css,html,vue,xml,svelte,php,twig,jade,js,ts,tsx,json,md,yml,yaml,ini,toml,hbs,ejs,pug,jinja,j2,j3}' --syntax scss --fix"
   },
   "dependencies": {
     "ant-design-vue": "^2.2.8",
@@ -29,6 +30,7 @@
     "eslint-plugin-vue": "^8.5.0",
     "less": "^4.1.2",
     "sass": "^1.49.8",
+    "sort-package-json": "^1.54.0",
     "stylelint": "^14.5.3",
     "stylelint-config-html": "^1.0.0",
     "stylelint-config-prettier": "^9.0.3",

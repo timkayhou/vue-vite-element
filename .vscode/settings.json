@@ -1,6 +1,10 @@
 {
   "cSpell.caseSensitive": true,
-  "cSpell.enableFiletypes": ["!svg", "!dll", "!log"],
+  "cSpell.enableFiletypes": [
+    "!svg",
+    "!dll",
+    "!log"
+  ],
   "cSpell.ignorePaths": [
     "package.json",
     "**/package.json",
@@ -23,9 +27,14 @@
     "brotli",
     "ecma",
     "esnext",
+    "issuehunt",
+    "liberapay",
+    "otechie",
+    "patreon",
     "prettierrc",
     "singlefile",
     "stylelint",
+    "tidelift",
     "unplugin",
     "vite",
     "vitejs"

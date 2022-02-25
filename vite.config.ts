@@ -2,7 +2,7 @@ import vue from '@vitejs/plugin-vue'
 import path from 'path'
 import {
   AntDesignVueResolver,
-  ElementPlusResolver,
+  ElementPlusResolver
 } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
@@ -14,11 +14,11 @@ const pathSrc = path.resolve(__dirname, 'src')
 export default defineConfig({
   resolve: {
     alias: {
-      '~/': `${pathSrc}/`,
-    },
+      '~/': `${pathSrc}/`
+    }
   },
   server: {
-    host: '0.0.0.0',
+    host: '0.0.0.0'
   },
   build: {
     target: 'esnext',
@@ -33,19 +33,19 @@ export default defineConfig({
         manualChunks: () => 'everything.js',
         entryFileNames: 'assets/[name].js',
         chunkFileNames: 'assets/[name].js',
-        assetFileNames: 'assets/[name].[ext]',
-      },
-    },
+        assetFileNames: 'assets/[name].[ext]'
+      }
+    }
   },
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "~/styles/element/index.scss" as *;`,
+        additionalData: `@use "~/styles/element/index.scss" as *;`
       },
       less: {
-        additionalData: ``,
-      },
-    },
+        additionalData: ``
+      }
+    }
   },
   plugins: [
     vue(),
@@ -54,10 +54,10 @@ export default defineConfig({
       resolvers: [
         AntDesignVueResolver(),
         ElementPlusResolver({
-          importStyle: 'sass',
-        }),
+          importStyle: 'sass'
+        })
       ],
-      dts: path.resolve(pathSrc, 'components.d.ts'),
-    }),
-  ],
+      dts: path.resolve(pathSrc, 'components.d.ts')
+    })
+  ]
 })

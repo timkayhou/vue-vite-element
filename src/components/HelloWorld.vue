@@ -27,21 +27,29 @@ const toast = () => {
 
   <!-- example components -->
   <div>
-    <el-button @click="toast">El Message</el-button>
-    <el-button type="primary" @click="count++">count is: {{ count }}</el-button>
-    <el-button type="success" @click="count++">count is: {{ count }}</el-button>
-    <el-button type="warning" @click="count++">count is: {{ count }}</el-button>
-    <el-button type="danger" @click="count++">count is: {{ count }}</el-button>
-    <el-button type="info" @click="count++">count is: {{ count }}</el-button>
+    <el-button @click="toast"> El Message </el-button>
+    <el-button type="primary" @click="count++">
+      count is: {{ count }}
+    </el-button>
+    <el-button type="success" @click="count++">
+      count is: {{ count }}
+    </el-button>
+    <el-button type="warning" @click="count++">
+      count is: {{ count }}
+    </el-button>
+    <el-button type="danger" @click="count++">
+      count is: {{ count }}
+    </el-button>
+    <el-button type="info" @click="count++"> count is: {{ count }} </el-button>
   </div>
   <br />
   <div>
     <a-button @click="toast"> Ant Message </a-button>
-    <a-button type="primary" @click="count++">count is: {{ count }}</a-button>
-    <a-button type="dashed" @click="count++">count is: {{ count }}</a-button>
-    <a-button type="ghost" @click="count++">count is: {{ count }}</a-button>
-    <a-button type="link" @click="count++">count is: {{ count }}</a-button>
-    <a-button type="text" @click="count++">count is: {{ count }}</a-button>
+    <a-button type="primary" @click="count++"> count is: {{ count }} </a-button>
+    <a-button type="dashed" @click="count++"> count is: {{ count }} </a-button>
+    <a-button type="ghost" @click="count++"> count is: {{ count }} </a-button>
+    <a-button type="link" @click="count++"> count is: {{ count }} </a-button>
+    <a-button type="text" @click="count++"> count is: {{ count }} </a-button>
   </div>
 
   <br />
@@ -52,17 +60,9 @@ const toast = () => {
   <a-tag>Tag 1</a-tag>
 
   <br />
-  <el-date-picker
-    v-model="curDate"
-    type="date"
-    placeholder="Pick a day"
-  ></el-date-picker>
+  <el-date-picker v-model="curDate" type="date" placeholder="Pick a day" />
   <br />
-  <a-date-picker
-    v-model="curDate"
-    type="date"
-    placeholder="Pick a day"
-  ></a-date-picker>
+  <a-date-picker v-model="curDate" type="date" placeholder="Pick a day" />
 
   <p>For example, we can custom primary color to 'green'.</p>
 

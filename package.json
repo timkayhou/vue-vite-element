@@ -9,7 +9,7 @@
     "sort-json": "npx sort-package-json \"*.json\" \"*(?!node_modules)/*.json\"",
     "eslint": "eslint --cache --cache-location \"node_modules\\.cache\\.eslintcache\" --max-warnings 0 \"{src,mock}/**/*.{vue,ts,tsx,js,jsx}\" --fix",
     "prettier": "npx prettier --write .",
-    "stylelint": "npx stylelint --cache --cache-location \"node_modules\\.cache\\.stylelintcache\" --max-warnings 0 {src,mock}/**/*.{scss,sass,less,css,html,xml,svelte,php,twig,jade,json,md,yml,yaml,ini,toml,hbs,ejs,pug,jinja,j2,j3} --fix"
+    "stylelint": "npx stylelint --cache --cache-location \"node_modules\\.cache\\.stylelintcache\" --max-warnings 0 {src,mock}/**/*.{scss,sass,less,css,html,vue,xml,svelte,php,twig,jade,json,md,yml,yaml,ini,toml,hbs,ejs,pug,jinja,j2,j3} --fix"
   },
   "dependencies": {
     "ant-design-vue": "^2.2.8",

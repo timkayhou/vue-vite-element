@@ -265,7 +265,7 @@ extends:
 
 ```PowerShell
 # PowerShell
-yarn add --dev prettier eslint-config-prettier
+yarn add --dev prettier eslint-config-prettier eslint-plugin-prettier
 ```
 
 ```toml

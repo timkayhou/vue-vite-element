@@ -328,7 +328,7 @@ yarn add --dev stylelint stylelint-prettier stylelint-config-prettier stylelint-
 ```
 
 ```yaml
-# .stylelint.yml
+# .stylelintrc.yml
 extends:
   - stylelint-config-standard-scss
   - stylelint-config-prettier-scss

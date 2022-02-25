@@ -344,3 +344,82 @@ plugins:
 rules:
   prettier/prettier: true
 ```
+
+### Install markdownlint
+
+```PowerShell
+# PowerShell
+npm install -D markdownlint
+```
+
+### Install commitlint
+
+```PowerShell
+# PowerShell
+yarn add --dev @commitlint/config-conventional @commitlint/cli
+```
+
+### Install husky
+
+```PowerShell
+# PowerShell
+yarn add husky --dev
+yarn husky install
+yarn husky add .husky/pre-commit 'yarn commitlint --edit $1'
+```
+
+```JSON
+# package.json
+"scripts": {
+    "husky": "husky --hook-run \"pre-commit\""
+  },
+```
+
+```YAML
+# .commitlintrc.yml
+extends:
+  - '@commitlint/config-conventional'
+rules:
+  type-enum:
+    - 2
+    - always
+    - - build
+      - ci
+      - perf
+      - feat
+      - fix
+      - refactor
+      - docs
+      - chore
+      - style
+      - revert
+      - test
+  type-empty:
+    - 2
+    - never
+  header-max-length:
+    - 0
+    - always
+    - 255
+```
+
+```shell
+# pre-commit
+#!/bin/sh
+# shellcheck source=/dev/null
+. "$(dirname "$0")/_/husky.sh"
+
+npm run sort-json
+npm run eslint
+npm run prettier
+npm run stylelint
+command_exists () {
+  command -v "$1" >/dev/null 2>&1
+}
+if command_exists winpty && test -t 1;
+then
+  exec < /dev/tty
+fi
+npm run test
+
+```

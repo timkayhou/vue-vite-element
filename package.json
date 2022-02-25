@@ -14,13 +14,13 @@
     "test": "echo Hello, world!"
   },
   "dependencies": {
-    "@commitlint/cli": "^16.2.1",
-    "@commitlint/config-conventional": "^16.2.1",
     "ant-design-vue": "^2.2.8",
     "element-plus": "^2.0.2",
     "vue": "^3.2.31"
   },
   "devDependencies": {
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
     "@types/node": "17.0.21",
     "@typescript-eslint/eslint-plugin": "^5.12.1",
     "@typescript-eslint/parser": "^5.12.1",

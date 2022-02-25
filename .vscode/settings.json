@@ -1,10 +1,6 @@
 {
   "cSpell.caseSensitive": true,
-  "cSpell.enableFiletypes": [
-    "!svg",
-    "!dll",
-    "!log",
-  ],
+  "cSpell.enableFiletypes": ["!svg", "!dll", "!log"],
   "cSpell.ignorePaths": [
     "package.json",
     "**/package.json",
@@ -20,7 +16,7 @@
     ".git",
     ".gitignore",
     "*ignore",
-    "*rc.json",
+    "*rc.json"
   ],
   "cSpell.words": [
     "Avenir",

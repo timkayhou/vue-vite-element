@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref } from 'vue'
 import { ElMessage } from 'element-plus'
 
-defineProps<{ msg: string }>();
+defineProps<{ msg: string }>()
 
-const count = ref(0);
-const input = ref("element-plus");
+const count = ref(0)
+const input = ref('element-plus')
 
 const curDate = ''
 
@@ -36,9 +36,7 @@ const toast = () => {
   </div>
   <br />
   <div>
-    <a-button @click="toast">
-      Ant Message
-    </a-button>
+    <a-button @click="toast"> Ant Message </a-button>
     <a-button type="primary" @click="count++">count is: {{ count }}</a-button>
     <a-button type="dashed" @click="count++">count is: {{ count }}</a-button>
     <a-button type="ghost" @click="count++">count is: {{ count }}</a-button>
@@ -54,9 +52,17 @@ const toast = () => {
   <a-tag>Tag 1</a-tag>
 
   <br />
-  <el-date-picker v-model="curDate" type="date" placeholder="Pick a day"></el-date-picker>
+  <el-date-picker
+    v-model="curDate"
+    type="date"
+    placeholder="Pick a day"
+  ></el-date-picker>
   <br />
-  <a-date-picker v-model="curDate" type="date" placeholder="Pick a day"></a-date-picker>
+  <a-date-picker
+    v-model="curDate"
+    type="date"
+    placeholder="Pick a day"
+  ></a-date-picker>
 
   <p>For example, we can custom primary color to 'green'.</p>
 

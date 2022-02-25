@@ -1,6 +1,9 @@
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
-import { AntDesignVueResolver, ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import {
+  AntDesignVueResolver,
+  ElementPlusResolver,
+} from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 import { viteSingleFile } from 'vite-plugin-singlefile'
@@ -15,10 +18,10 @@ export default defineConfig({
     },
   },
   server: {
-    host: '0.0.0.0'
+    host: '0.0.0.0',
   },
   build: {
-    target: "esnext",
+    target: 'esnext',
     outDir: 'dist',
     assetsInlineLimit: 1000,
     chunkSizeWarningLimit: 1000,
@@ -27,21 +30,21 @@ export default defineConfig({
     rollupOptions: {
       inlineDynamicImports: true,
       output: {
-        manualChunks: () => "everything.js",
+        manualChunks: () => 'everything.js',
         entryFileNames: 'assets/[name].js',
         chunkFileNames: 'assets/[name].js',
-        assetFileNames: 'assets/[name].[ext]'
+        assetFileNames: 'assets/[name].[ext]',
       },
     },
   },
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "~/styles/element/index.scss" as *;`
+        additionalData: `@use "~/styles/element/index.scss" as *;`,
       },
       less: {
-        additionalData: ``
-      }
+        additionalData: ``,
+      },
     },
   },
   plugins: [

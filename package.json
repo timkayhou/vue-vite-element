@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "ant-design-vue": "^2.2.8",
+    "editorconfig": "^0.15.3",
     "element-plus": "^2.0.2",
     "prettier": "^2.5.1",
     "vue": "^3.2.31"

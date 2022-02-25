@@ -263,17 +263,25 @@ extends:
 
 ### Install Prettier
 
-```yaml
-# .eslintrc.yml
-extends:
-  - eslint:recommended
-  - plugin:vue/vue3-essential
-  - plugin:@typescript-eslint/recommended
-  - prettier
-rules: { prettier/prettier: error }
+```PowerShell
+# PowerShell
+yarn add --dev prettier eslint-config-prettier
+```
+
+```toml
+# .prettierrc.toml
+trailingComma = "es5"
+tabWidth = 2
+semi = false
+singleQuote = true
 ```
 
 ### Install EditorConfig
+
+```PowerShell
+# PowerShell
+yarn add --dev editorconfig
+```
 
 ```config
 # .editorconfig
@@ -288,4 +296,32 @@ indent_size = 2
 end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
+```
+
+### Install stylelint
+
+```PowerShell
+# PowerShell
+yarn add --dev stylelint stylelint-prettier stylelint-config-prettier stylelint-config-standard stylelint-config-rational-order stylelint-config-standard-scss stylelint-config-html stylelint-config-recommended-vue
+```
+
+```yaml
+# .stylelint.yml
+env:
+  browser: true
+  es2021: true
+  vue/setup-compiler-macros: true
+extends:
+  - eslint:recommended
+  - plugin:vue/vue3-essential
+  - plugin:@typescript-eslint/recommended
+  - prettier
+parserOptions:
+  ecmaVersion: latest
+  parser: '@typescript-eslint/parser'
+  sourceType: module
+plugins:
+  - vue
+  - '@typescript-eslint'
+rules: { prettier/prettier: error }
 ```

@@ -324,7 +324,7 @@ trim_trailing_whitespace = true
 
 ```PowerShell
 # PowerShell
-yarn add --dev stylelint stylelint-prettier stylelint-config-prettier stylelint-config-standard stylelint-config-rational-order stylelint-config-standard-scss stylelint-config-html stylelint-config-recommended-vue
+yarn add --dev stylelint stylelint-prettier stylelint-config-prettier stylelint-config-standard stylelint-config-rational-order stylelint-config-standard-scss stylelint-config-html stylelint-config-recommended-vue stylelint-config-prettier-scss postcss postcss-html
 ```
 
 ```yaml

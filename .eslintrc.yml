@@ -4,18 +4,14 @@ env:
   vue/setup-compiler-macros: true
 extends:
   - eslint:recommended
-  - 'plugin:vue/base'
-  - 'plugin:vue/vue3-recommended'
   - plugin:@typescript-eslint/recommended
+  - plugin:vue/base
+  - plugin:vue/vue3-recommended
   - prettier
 parserOptions:
   ecmaVersion: latest
-  parser:
-    - vue
-    - '@typescript-eslint/parser'
+  parser: '@typescript-eslint/parser'
   sourceType: module
 plugins:
   - vue
   - '@typescript-eslint'
-  - prettier
-rules: { prettier/prettier: 2 }

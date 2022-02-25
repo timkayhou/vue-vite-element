@@ -215,3 +215,35 @@ export default defineConfig({
   }
 })
 ```
+
+### Install ESLint
+
+```PowerShell
+# PowerShell
+yarn add --dev eslint
+eslint --init
+```
+
+>√ How would you like to use ESLint? · problems
+>
+>? What type of modules does your project use? ...
+>
+>√ JavaScript modules (import/export)
+>
+> CommonJS (require/exports)
+>
+>√ What type of modules does your project use? · esm
+>
+>√ Which framework does your project use? · vue
+>
+>√ Does your project use TypeScript? · No / Yes
+>
+>√ Where does your code run? · browser
+>
+>√ What format do you want your config file to be in? · YAML
+>
+>The config that you've selected requires the following dependencies:
+>
+>eslint-plugin-vue@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/>parser@latest
+>
+>√ Would you like to install them now with npm? · No / Yes

@@ -1,0 +1,14 @@
+extends:
+  - stylelint-config-standard-scss
+  - stylelint-config-prettier-scss
+  - stylelint-config-rational-order
+  - stylelint-config-html/html
+  - stylelint-config-html/xml
+  - stylelint-config-html/svelte
+  - stylelint-config-html/php
+  - stylelint-config-recommended-vue
+  - stylelint-prettier/recommended
+plugins:
+  - stylelint-prettier
+rules:
+  prettier/prettier: true
